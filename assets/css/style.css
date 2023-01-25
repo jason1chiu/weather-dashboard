@@ -1,8 +1,5 @@
 * {
   box-sizing: border-box;
+  margin: auto;
 }
 
-/* body {
-  display: flex;
-  flex-flow: column wrap;
-} */
