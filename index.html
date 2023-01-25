@@ -36,15 +36,17 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-md-2 my-4">
-        <label for="citySearch" class="form-label d-flex justify-content-center">
-          <h2>Search for a City:</h2>
-        </label>
-        <input type="text" class="form-control my-4" placeholder="Seattle" id="citySearch">
-        <div class="text-center">
-          <button type="button" class="btn btn-primary text-center">
+        <h2 class="text-center">City</h2>
+        <form class="text-center" id="searchForm">
+          <input type="text" class="w-100 my-2" id="citySearch" placeholder="Seattle">
+          <button type="submit" class="w-100 my-2 btn btn-primary btn-lg btn-block" id="searchBtn">
             Search
           </button>
+        </form>
+        <div class="jumbotron text-center">
+          <h2>History</h2>
         </div>
+        <div class="button-group-vertical justify-content-center" id="citiesBtns"></div>
       </div>
       <div class="col-12 col-md-10 my-4">
         <div class="row">
