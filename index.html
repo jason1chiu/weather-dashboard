@@ -36,19 +36,21 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-md-2 my-4">
-        <h2 class="text-center">City</h2>
+        <h2 class="text-center">
+          City
+        </h2>
         <form class="text-center" id="searchForm">
           <input type="text" class="w-100 my-2" id="citySearch" placeholder="Seattle">
           <button type="submit" class="w-100 my-2 btn btn-primary btn-lg btn-block" id="searchBtn">
             Search
           </button>
         </form>
-        <div class="jumbotron text-center">
+        <div class="jumbotron text-center" id="history">
           <h2>History</h2>
+          <div class="button-group-vertical justify-content-center" id="citiesBtns"></div>
         </div>
-        <div class="button-group-vertical justify-content-center" id="citiesBtns"></div>
       </div>
-      <div class="col-12 col-md-10 my-4">
+      <div class="col-12 col-md-10 my-4" id="weatherForecast">
         <div class="row">
           <div class="col-12">
             <div class="jumbotron">
@@ -56,7 +58,7 @@
             </div>
             <div class="border border-primary p-2 text-center">
               <h4 id="todaysDate"></h4>
-              <img id="icon">
+              <img src="" alt="" id="icon0">
               <h4 id="temp"></h4>
               <h4 id="wind"></h4>
               <h4 id="humidity"></h4>
@@ -68,10 +70,10 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-2 my-4 flex-grow-1">
-                  <div class="card">
-                    <div class="card-body">
+                  <div class="card" id="card1">
+                    <div class="card-body text-center">
                       <h6 class="card-title" id="day1Title"></h6>
-                      <img src="" alt="" class="" id="icon1">
+                      <img src="" id="icon1">
                       <h6 class="card-text" id="temp1"></h6>
                       <h6 class="card-text" id="wind1"></h6>
                       <h6 class="card-text" id="humidity1"></h6>
@@ -80,7 +82,7 @@
                 </div>
                 <div class="col-12 col-md-2 my-4 flex-grow-1">
                   <div class="card">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                       <h6 class="card-title" id="day2Title"></h6>
                       <img src="" alt="" class="" id="icon2">
                       <h6 class="card-text" id="temp2"></h6>
@@ -91,7 +93,7 @@
                 </div>
                 <div class="col-12 col-md-2 my-4 flex-grow-1">
                   <div class="card">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                       <h6 class="card-title" id="day3Title"></h6>
                       <img src="" alt="" class="" id="icon3">
                       <h6 class="card-text" id="temp3"></h6>
@@ -102,7 +104,7 @@
                 </div>
                 <div class="col-12 col-md-2 my-4 flex-grow-1">
                   <div class="card">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                       <h6 class="card-title" id="day4Title"></h6>
                       <img src="" alt="" class="" id="icon4">
                       <h6 class="card-text" id="temp4"></h6>
@@ -113,7 +115,7 @@
                 </div>
                 <div class="col-12 col-md-2 my-4 flex-grow-1">
                   <div class="card">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                       <h6 class="card-title" id="day5Title"></h6>
                       <img src="" alt="" class="" id="icon5">
                       <h6 class="card-text" id="temp5"></h6>
