@@ -3,7 +3,7 @@ $(function() {
   var searchForm = $("#searchForm");
   var searchInput = $("#citySearch");
   var citiesBtns = $("#citiesBtns");
-  var cityEl = $("#city");
+  var windEl = $("#wind");
 
   var key = "e37962da806ca348cd44055871a41a14";
   var KtoC = -273.15;
@@ -48,23 +48,33 @@ $(function() {
       .then(function(data) {
         var latitude = data[0].lat;
         var longitude = data[0].lon;
-        useCoordinates(latitude, longitude);
+        currentWeather(latitude, longitude);
+        weatherForecast(latitude, longitude);
       })
   }
 
-  function useCoordinates(latitude, longitude) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`)
+  function currentWeather(latitude, longitude) {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${key}`)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        city.innerHTML = data.name;
+        temp.innerHTML = "Temp: " + data.main.temp + " &#8451";
+        wind.innerHTML = "Wind: " + data.wind.speed + " m/s";
+        humidity.innerHTML = "Humidity: " + data.main.humidity + "%";
+      })
+  };
+
+  function weatherForecast(latitude, longitude) {
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&appid=${key}`)
       .then(function(response) {
         return response.json();
       })
       .then(function(data) {
         console.log(data);
 
-        city.innerHTML = data.name;
-        tempInCelsius = (data.main.temp + KtoC).toFixed(2);
-        console.log(tempInCelsius);
-        temp.innerHTML = "Temp: " + tempInCelsius;
+        day1.innerHTML = data.city.name;
       })
   };
-
 });
