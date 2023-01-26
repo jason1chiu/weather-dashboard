@@ -103,7 +103,7 @@ $(function() {
       case "Clouds":
         $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/clouds.gif')");
         break;
-      case "Fog":
+      case "Fog", "Mist":
         $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/fog.gif')");
         break;
       case "Rain", "Drizzle":
