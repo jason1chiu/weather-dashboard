@@ -52,10 +52,11 @@
         <div class="row">
           <div class="col-12">
             <div class="jumbotron">
-              <h2>Today's Weather Forecast</h2>
+              <h2 class="d-flex justify-content-center" id="city"></h2>
             </div>
-            <div class="border border-primary p-2" id="currentForecast">
-              <h3 id="city"></h3>
+            <div class="border border-primary p-2 text-center">
+              <h4 id="todaysDate"></h4>
+              <img id="icon">
               <h4 id="temp"></h4>
               <h4 id="wind"></h4>
               <h4 id="humidity"></h4>
@@ -63,38 +64,65 @@
           </div>
           <div class="col-12 my-4">
             <div class="jumbotron">
-              <h2>5-Day Forecast</h2>
+              <h2 class="d-flex justify-content-center">5-Day Forecast</h2>
             </div>
-            <div class="row justify-content-center">
-              <div class="col-12 col-md-2 my-4 flex-grow-1">
+            <div class="row">
+                <div class="col-12 col-md-2 my-4 flex-grow-1">
                   <div class="card">
                     <div class="card-body">
-                      <h3 class="card-title" id="day1"></h3>
+                      <h6 class="card-title" id="day1Title"></h6>
+                      <img src="" alt="" class="" id="icon1">
+                      <h6 class="card-text" id="temp1"></h6>
+                      <h6 class="card-text" id="wind1"></h6>
+                      <h6 class="card-text" id="humidity1"></h6>
                     </div>
                   </div>
                 </div>
                 <div class="col-12 col-md-2 my-4 flex-grow-1">
-                  <div class="card" id="day2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-2 my-4 flex-grow-1">
-                    <div class="card" id="day3">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-2 my-4 flex-grow-1">
-                    <div class="card" id="day4">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-2 my-4 flex-grow-1">
-                    <div class="card" id="day2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-title" id="day2Title"></h6>
+                      <img src="" alt="" class="" id="icon2">
+                      <h6 class="card-text" id="temp2"></h6>
+                      <h6 class="card-text" id="wind2"></h6>
+                      <h6 class="card-text" id="humidity2"></h6>
                     </div>
                   </div>
                 </div>
-
+                <div class="col-12 col-md-2 my-4 flex-grow-1">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-title" id="day3Title"></h6>
+                      <img src="" alt="" class="" id="icon3">
+                      <h6 class="card-text" id="temp3"></h6>
+                      <h6 class="card-text" id="wind3"></h6>
+                      <h6 class="card-text" id="humidity3"></h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-2 my-4 flex-grow-1">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-title" id="day4Title"></h6>
+                      <img src="" alt="" class="" id="icon4">
+                      <h6 class="card-text" id="temp4"></h6>
+                      <h6 class="card-text" id="wind4"></h6>
+                      <h6 class="card-text" id="humidity4"></h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-2 my-4 flex-grow-1">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-title" id="day5Title"></h6>
+                      <img src="" alt="" class="" id="icon5">
+                      <h6 class="card-text" id="temp5"></h6>
+                      <h6 class="card-text" id="wind5"></h6>
+                      <h6 class="card-text" id="humidity5"></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
