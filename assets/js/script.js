@@ -50,7 +50,7 @@ $(function() {
 
         currentWeather(lat, lon);
         futureWeather(lat, lon);
-        weatherForecast.show("slide", 1000);   
+        weatherForecast.show("fold", 1000);   
       })
       .catch (function(error) {
         window.alert("City not found!");
