@@ -75,6 +75,7 @@ $(function() {
       })
       .then(function(data) {
         showCurrentWeather(data);
+        console.log(data);
       })
   };
 
@@ -91,6 +92,33 @@ $(function() {
     temp.innerHTML = "Temp: " + data.main.temp + "&#8451;";
     wind.innerHTML = "Wind: " + data.wind.speed + " m/s";
     humidity.innerHTML = "Humidity: " + data.main.humidity + " %";
+
+    var condition = data.weather[0].main;
+    console.log(condition);
+
+    switch (condition) {
+      case "Snow":
+        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/snow.gif')");
+        break;
+      case "Clouds":
+        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/clouds.gif')");
+        break;
+      case "Fog":
+        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/fog.gif')");
+        break;
+      case "Rain", "Drizzle":
+        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/rain.gif')");
+        break;
+      case "Clear":
+        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif')");
+        break;
+      case "Thunderstorm":
+        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/thunderstorm.gif')");
+        break;
+      default:
+        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif')");
+        break;
+    }
   }
 
   function futureWeather(lat, lon) {
