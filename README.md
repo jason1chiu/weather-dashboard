@@ -32,4 +32,8 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 ```
 
-![]()
+
+Github Repo: [https://github.com/jason1chiu/weather-dashboard](https://github.com/jason1chiu/weather-dashboard) <br>
+Github Page: [https://jason1chiu.github.io/weather-dashboard/](https://jason1chiu.github.io/weather-dashboard/)
+
+
