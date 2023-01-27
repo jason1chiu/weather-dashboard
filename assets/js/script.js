@@ -117,6 +117,8 @@ $(function() {
         break;
       case "Fog":
         $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/fog.gif')");
+        $("h2").removeClass("text-white");
+        $("h2").addClass("text-black");
         break;
       case "Rain":
       case "Drizzle":
@@ -126,6 +128,8 @@ $(function() {
         break;
       case "Clear":
         $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif')");
+        $("h2").removeClass("text-white");
+        $("h2").addClass("text-black");
         break;
       case "Thunderstorm":
         $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/thunderstorm.gif')");
@@ -134,6 +138,8 @@ $(function() {
         break;
       default:
         $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif')");
+        $("h2").removeClass("text-white");
+        $("h2").addClass("text-black");
         break;
     }
   }
