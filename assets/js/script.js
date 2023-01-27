@@ -1,6 +1,6 @@
 $(function() {
 
-    // clear storage
+  // clear storage
   localStorage.clear();
 
   // global variables selected
