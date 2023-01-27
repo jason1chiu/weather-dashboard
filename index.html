@@ -30,17 +30,17 @@
 <!-- BODY -->
 <body class="d-flex flex-column bg-success">
 
-  <div class="row">
-    <div class="col-12 d-flex justify-content-center align-items-center bg-primary text-white p-4">
+  <section class="row">
+    <section class="col-12 d-flex justify-content-center align-items-center bg-primary text-white p-4">
       <h1>
         Weather Dashboard
       </h1>
-    </div>
-  </div>
+    </section>
+  </section>
 
-  <div class="container-fluid text-black">
-    <div class="row">
-      <div class="col-12 col-md-2 my-4">
+  <section class="container-fluid text-black">
+    <section class="row">
+      <section class="col-12 col-md-2 my-4">
         <h2 class="text-center">
           City
         </h2>
@@ -50,93 +50,93 @@
             Search
           </button>
         </form>
-        <div class="jumbotron text-center" id="history">
+        <section class="jumbotron text-center" id="history">
           <h2>History</h2>
-          <div class="button-group-vertical justify-content-center" id="citiesBtns"></div>
-        </div>
-      </div>
+          <section class="button-group-vertical justify-content-center" id="citiesBtns"></section>
+        </section>
+      </section>
 
-      <div class="col-12 col-md-10 my-4" id="weatherForecast">
-        <div class="row">
-          <div class="col-12">
-            <div class="jumbotron" >
+      <section class="col-12 col-md-10 my-4" id="weatherForecast">
+        <section class="row">
+          <section class="col-12">
+            <section class="jumbotron" >
               <h2 class="d-flex justify-content-center" id="city"></h2>
-            </div>
-            <div class="p-2 text-center card shadow-lg" >
+            </section>
+            <section class="p-2 text-center card shadow-lg" >
               <h4 id="todaysDate"></h4>
               <img src="" alt="" id="icon0">
               <h4 id="temp"></h4>
               <h4 id="wind"></h4>
               <h4 id="humidity"></h4>
-            </div>
-          </div>
+            </section>
+          </section>
 
-          <div class="col-12 my-4">
-            <div class="jumbotron">
+          <section class="col-12 my-4">
+            <section class="jumbotron">
               <h2 class="d-flex justify-content-center">5-Day Forecast</h2>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-6 my-4 flex-grow-1">
-                  <div class="card shadow">
-                    <div class="card-body text-center">
-                      <h6 class="card-title" id="day1Title"></h6>
+            </section>
+            <section class="row">
+                <section class="col-12 col-md-6 my-4 flex-grow-1">
+                  <section class="card shadow">
+                    <section class="card-body text-center">
+                      <h3 class="card-title" id="day1Title"></h3>
                       <img src="" id="icon1">
-                      <h6 class="card-text" id="temp1"></h6>
-                      <h6 class="card-text" id="wind1"></h6>
-                      <h6 class="card-text" id="humidity1"></h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 my-4 flex-grow-1">
-                  <div class="card shadow">
-                    <div class="card-body text-center">
-                      <h6 class="card-title" id="day2Title"></h6>
+                      <h3 class="card-text" id="temp1"></h3>
+                      <h3 class="card-text" id="wind1"></h3>
+                      <h3 class="card-text" id="humidity1"></h3>
+                    </section>
+                  </section>
+                </section>
+                <section class="col-12 col-md-6 my-4 flex-grow-1">
+                  <section class="card shadow">
+                    <section class="card-body text-center">
+                      <h3 class="card-title" id="day2Title"></h3>
                       <img src="" alt="" class="" id="icon2">
-                      <h6 class="card-text" id="temp2"></h6>
-                      <h6 class="card-text" id="wind2"></h6>
-                      <h6 class="card-text" id="humidity2"></h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4 my-4 flex-grow-1">
-                  <div class="card shadow-sm">
-                    <div class="card-body text-center">
-                      <h6 class="card-title" id="day3Title"></h6>
+                      <h3 class="card-text" id="temp2"></h3>
+                      <h3 class="card-text" id="wind2"></h3>
+                      <h3 class="card-text" id="humidity2"></h3>
+                    </section>
+                  </section>
+                </section>
+                <section class="col-12 col-md-4 my-4 flex-grow-1">
+                  <section class="card shadow-sm">
+                    <section class="card-body text-center">
+                      <h3 class="card-title" id="day3Title"></h3>
                       <img src="" alt="" class="" id="icon3">
-                      <h6 class="card-text" id="temp3"></h6>
-                      <h6 class="card-text" id="wind3"></h6>
-                      <h6 class="card-text" id="humidity3"></h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4 my-4 flex-grow-1">
-                  <div class="card shadow-sm">
-                    <div class="card-body text-center">
-                      <h6 class="card-title" id="day4Title"></h6>
+                      <h3 class="card-text" id="temp3"></h3>
+                      <h3 class="card-text" id="wind3"></h3>
+                      <h3 class="card-text" id="humidity3"></h3>
+                    </section>
+                  </section>
+                </section>
+                <section class="col-12 col-md-4 my-4 flex-grow-1">
+                  <section class="card shadow-sm">
+                    <section class="card-body text-center">
+                      <h3 class="card-title" id="day4Title"></h3>
                       <img src="" alt="" class="" id="icon4">
-                      <h6 class="card-text" id="temp4"></h6>
-                      <h6 class="card-text" id="wind4"></h6>
-                      <h6 class="card-text" id="humidity4"></h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4 my-4 flex-grow-1">
-                  <div class="card">
-                    <div class="card-body text-center">
-                      <h6 class="card-title" id="day5Title"></h6>
+                      <h3 class="card-text" id="temp4"></h3>
+                      <h3 class="card-text" id="wind4"></h3>
+                      <h3 class="card-text" id="humidity4"></h3>
+                    </section>
+                  </section>
+                </section>
+                <section class="col-12 col-md-4 my-4 flex-grow-1">
+                  <section class="card">
+                    <section class="card-body text-center">
+                      <h3 class="card-title" id="day5Title"></h3>
                       <img src="" alt="" class="" id="icon5">
-                      <h6 class="card-text" id="temp5"></h6>
-                      <h6 class="card-text" id="wind5"></h6>
-                      <h6 class="card-text" id="humidity5"></h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-  </div>
+                      <h3 class="card-text" id="temp5"></h3>
+                      <h3 class="card-text" id="wind5"></h3>
+                      <h3 class="card-text" id="humidity5"></h3>
+                    </section>
+                  </section>
+                </section>
+              </section>
+            </section>
+          </section>
+        </section>
+    </section>
+  </section>
 
   <!-- SCRIPTS -->
   <script
