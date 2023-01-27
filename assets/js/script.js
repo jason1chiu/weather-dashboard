@@ -32,7 +32,7 @@ $(function() {
     if (citySearch) {
       findCoordinates(citySearch);
     } else {
-      window.alert("Please input a city's name.");
+      alert("Please input a city's name.");
     }
   });
 
@@ -57,10 +57,9 @@ $(function() {
         weatherForecast.show("fold", 1000);   
       })
       .catch (function(error) {
-        window.alert("City not found!");
+        alert("City not found!");
       });
       searchInput.val("");
-
   }
 
   // create buttons for the existing cities
