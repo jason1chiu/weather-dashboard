@@ -69,7 +69,7 @@ $(function() {
       text: citySearch
     });
     
-    btn.addClass("btn btn-secondary btn-lg btn-block w-100 mb-3");
+    btn.addClass("btn btn-secondary btn-lg btn-block w-100 mb-3 d-flex justify-content-center");
     citiesBtns.prepend(btn);
   }
 
