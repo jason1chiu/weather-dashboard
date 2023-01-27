@@ -27,10 +27,11 @@ $(function() {
 
     if (citySearch) {
       findCoordinates(citySearch);
+      $("h2").removeClass("text-black");
+      $("h2").addClass("text-white");
     } else {
       window.alert("Please input a city's name.");
     }
-
   });
 
   function findCoordinates(citySearch) {
@@ -50,7 +51,7 @@ $(function() {
 
         currentWeather(lat, lon);
         futureWeather(lat, lon);
-        weatherForecast.show("fold", 1000);   
+        weatherForecast.show("fold", 2000);   
       })
       .catch (function(error) {
         window.alert("City not found!");
@@ -64,7 +65,7 @@ $(function() {
       text: citySearch
     });
     
-    btn.addClass("btn btn-secondary btn-lg btn-block w-100 mb-3 custom-button");
+    btn.addClass("btn btn-secondary btn-lg btn-block w-100 mb-3");
     citiesBtns.prepend(btn);
   }
 
@@ -75,7 +76,6 @@ $(function() {
       })
       .then(function(data) {
         showCurrentWeather(data);
-        console.log(data);
       })
   };
 

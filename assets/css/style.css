@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: auto;
 }
 
 #weatherForecast {
@@ -8,5 +8,5 @@
 }
 
 body {
-  font-family: "Titillium Web"
+  font-family: "Merriweather";
 }
