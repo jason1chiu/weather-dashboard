@@ -1,24 +1,28 @@
 $(function() {
 
+    // clear storage
   localStorage.clear();
 
+  // global variables selected
   var searchForm = $("#searchForm");
   var searchInput = $("#citySearch");
   var citiesBtns = $("#citiesBtns");
   var history = $("#history");
   var weatherForecast = $("#weatherForecast");
-
   var city = $("#city")[0];
   var key = "e37962da806ca348cd44055871a41a14";
   
+  // getting stuff from local storage for cities
   var citiesStorage = localStorage.getItem("cities");
 
+  // create or add to an array
   if (citiesStorage) {
     citiesStorage = JSON.parse(citiesStorage)
   } else {
     citiesStorage = [];
   }
 
+  // create a button if city name exists using the function findCoordinates
   citiesStorage.forEach(createBtn);
 
   searchForm.on('submit', function(event) {
@@ -32,6 +36,7 @@ $(function() {
     }
   });
 
+  // find the coordinates of the city name by fetching from open Weather api, pushing them into storage if it is not already there and checking if city exists
   function findCoordinates(citySearch) {
     fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${citySearch}&limit=1&appid=${key}`)
       .then(function(response) {
@@ -58,6 +63,7 @@ $(function() {
 
   }
 
+  // create buttons for the existing cities
   function createBtn(citySearch) {
     var btn = $("<button>", {
       text: citySearch
@@ -67,6 +73,7 @@ $(function() {
     citiesBtns.prepend(btn);
   }
 
+  // function to find the current weather using latitude and longitude
   function currentWeather(lat, lon) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${key}`)
       .then(function(response) {
@@ -77,6 +84,7 @@ $(function() {
       })
   };
 
+  // function to display the current weather 
   function showCurrentWeather(data) {
     var temp = $("#temp")[0];
     var wind = $("#wind")[0];
@@ -90,8 +98,43 @@ $(function() {
     temp.innerHTML = "Temp: " + data.main.temp + "&#8451;";
     wind.innerHTML = "Wind: " + data.wind.speed + " m/s";
     humidity.innerHTML = "Humidity: " + data.main.humidity + " %";
+
+    var condition = data.weather[0].main;
+    console.log(condition);
+
+    // switch the background image between different conditions
+    switch (condition) {
+      case "Snow":
+        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/snow.gif')");
+        break;
+      case "Clouds":
+      case "Mist":
+        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/clouds.gif')");
+        $("h2").removeClass("text-black");
+        $("h2").addClass("text-white");
+        break;
+      case "Fog":
+        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/fog.gif')");
+        break;
+      case "Rain":
+      case "Drizzle":
+        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/rain.gif')");
+        $("h2").removeClass("text-black");
+        $("h2").addClass("text-white");
+        break;
+      case "Clear":
+        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif')");
+        break;
+      case "Thunderstorm":
+        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/thunderstorm.gif')");
+        break;
+      default:
+        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif')");
+        break;
+    }
   }
 
+  // function to get the future 5-day forecast
   function futureWeather(lat, lon) {
     fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${key}`)
       .then(function(response) {
@@ -102,6 +145,7 @@ $(function() {
       })
   }
 
+  // function to show the 5-day forecast
   function showFutureWeather(data) {
     for (var i = 1; i < 6; i++) {
       $("#day" + i + "Title")[0].innerHTML = dayjs().add(i, 'd').format("MM/DD/YYYY");
@@ -113,10 +157,12 @@ $(function() {
     }
   }
 
+  // click event to search the same city again if button are created already
   history.on('click', searchAgain)
+
+  // function to search the city with its own button
   function searchAgain(event) {
     event.preventDefault();
     findCoordinates(event.target.innerHTML)
   }
-
 });
