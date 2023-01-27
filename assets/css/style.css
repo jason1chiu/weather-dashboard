@@ -10,3 +10,7 @@
 body {
   font-family: "Merriweather";
 }
+
+#wrapper-bg {
+  background-size: cover;
+}
