@@ -36,7 +36,11 @@ THEN I am again presented with current and future conditions for that city
 Github Repo: [https://github.com/jason1chiu/weather-dashboard](https://github.com/jason1chiu/weather-dashboard) <br>
 Github Page: [https://jason1chiu.github.io/weather-dashboard/](https://jason1chiu.github.io/weather-dashboard/)
 
-
+## Extra
+```
+I added a Fold effect.
+I added animated backgrounds.
+```
 ![Screenshot 2023-01-27 at 4 29 26 PM](https://user-images.githubusercontent.com/119711904/215205228-553cd406-09fe-4323-ab43-e2de79b48755.png)
 ![Screenshot 2023-01-27 at 4 30 00 PM](https://user-images.githubusercontent.com/119711904/215205258-2cfbdbf4-a8f8-4a51-9279-ebc8faf75587.png)
 ![Screenshot 2023-01-27 at 4 30 09 PM](https://user-images.githubusercontent.com/119711904/215205275-0f2f262c-2203-44ea-a284-b41ad9efc8c9.png)
