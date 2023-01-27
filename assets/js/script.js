@@ -106,6 +106,8 @@ $(function() {
     switch (condition) {
       case "Snow":
         $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/snow.gif')");
+        $("h2").removeClass("text-black");
+        $("h2").addClass("text-white");
         break;
       case "Clouds":
       case "Mist":
@@ -127,6 +129,8 @@ $(function() {
         break;
       case "Thunderstorm":
         $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/thunderstorm.gif')");
+        $("h2").removeClass("text-black");
+        $("h2").addClass("text-white");
         break;
       default:
         $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif')");
