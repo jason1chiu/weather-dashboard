@@ -27,8 +27,6 @@ $(function() {
 
     if (citySearch) {
       findCoordinates(citySearch);
-      $("h2").removeClass("text-black");
-      $("h2").addClass("text-white");
     } else {
       window.alert("Please input a city's name.");
     }
@@ -51,7 +49,7 @@ $(function() {
 
         currentWeather(lat, lon);
         futureWeather(lat, lon);
-        weatherForecast.show("fold", 2000);   
+        weatherForecast.show("fold", 1000);   
       })
       .catch (function(error) {
         window.alert("City not found!");
@@ -92,33 +90,6 @@ $(function() {
     temp.innerHTML = "Temp: " + data.main.temp + "&#8451;";
     wind.innerHTML = "Wind: " + data.wind.speed + " m/s";
     humidity.innerHTML = "Humidity: " + data.main.humidity + " %";
-
-    var condition = data.weather[0].main;
-    console.log(condition);
-
-    switch (condition) {
-      case "Snow":
-        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/snow.gif')");
-        break;
-      case "Clouds":
-        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/clouds.gif')");
-        break;
-      case "Fog", "Mist":
-        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/fog.gif')");
-        break;
-      case "Rain", "Drizzle":
-        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/rain.gif')");
-        break;
-      case "Clear":
-        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif')");
-        break;
-      case "Thunderstorm":
-        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/thunderstorm.gif')");
-        break;
-      default:
-        $("#wrapper-bg").css("background-image", "url('https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif')");
-        break;
-    }
   }
 
   function futureWeather(lat, lon) {
