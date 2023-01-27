@@ -37,3 +37,11 @@ Github Repo: [https://github.com/jason1chiu/weather-dashboard](https://github.co
 Github Page: [https://jason1chiu.github.io/weather-dashboard/](https://jason1chiu.github.io/weather-dashboard/)
 
 
+![Screenshot 2023-01-27 at 4 29 26 PM](https://user-images.githubusercontent.com/119711904/215205228-553cd406-09fe-4323-ab43-e2de79b48755.png)
+![Screenshot 2023-01-27 at 4 30 00 PM](https://user-images.githubusercontent.com/119711904/215205258-2cfbdbf4-a8f8-4a51-9279-ebc8faf75587.png)
+![Screenshot 2023-01-27 at 4 30 09 PM](https://user-images.githubusercontent.com/119711904/215205275-0f2f262c-2203-44ea-a284-b41ad9efc8c9.png)
+![Screenshot 2023-01-27 at 4 30 24 PM](https://user-images.githubusercontent.com/119711904/215205291-d2172f3c-4b8e-4a4c-aa4f-19f9a6aaf437.png)
+![Screenshot 2023-01-27 at 4 30 31 PM](https://user-images.githubusercontent.com/119711904/215205313-aa41c4c8-cb04-4086-9e47-e6b5e1abe7e8.png)
+![Screenshot 2023-01-27 at 4 30 41 PM](https://user-images.githubusercontent.com/119711904/215205327-38eb9ffd-6cc7-423b-bcdb-6fc4a107ee66.png)
+![Screenshot 2023-01-27 at 4 30 45 PM](https://user-images.githubusercontent.com/119711904/215205357-653f6a32-f802-44f6-b9aa-a304a794813a.png)
+
